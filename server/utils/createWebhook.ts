@@ -1,7 +1,7 @@
 import { Octokit } from "@octokit/rest";
 import { existsSync } from "fs";
 
-const TARGET_DOMAIN = "http://localhost:3801/update/webhook";
+const TARGET_DOMAIN = "http://aiatl-v.vercel.app/update/webhook";
 
 async function isWebhookExists(octokit: Octokit, owner: string, repo: string) {
     try {

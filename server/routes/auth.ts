@@ -7,7 +7,7 @@ const router = Router();
 
 router.get('/api/auth/github/start', (_req, res) => {
   const clientId = process.env.GITHUB_CLIENT_ID;
-  const redirectUri = process.env.GITHUB_REDIRECT_URI ?? 'http://localhost:3001/auth/github/callback';
+  const redirectUri = process.env.GITHUB_REDIRECT_URI ?? 'http://aiatl-v.vercel.app/auth/github/callback';
 
   console.log('clientId in route:', clientId);
   console.log('redirectUri in route:', redirectUri);

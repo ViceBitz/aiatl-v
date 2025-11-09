@@ -145,7 +145,7 @@ router.get('/status/:executionArn', async (req: AuthRequest, res) => {
 
 // Helper function to execute onboarding workflow
 async function executeOnboardingWorkflow(executionArn: string, input: any) {
-  const API_URL = process.env.API_URL || 'http://localhost:3001';
+  const API_URL = process.env.API_URL || 'http://aiatl-v.vercel.app';
   const octokit = new Octokit({ auth: input.githubToken });
 
   try {
@@ -239,7 +239,7 @@ async function executeOnboardingWorkflow(executionArn: string, input: any) {
 
 // Helper function to execute modification workflow
 async function executeModificationWorkflow(executionArn: string, input: any) {
-  const API_URL = process.env.API_URL || 'http://localhost:3001';
+  const API_URL = process.env.API_URL || 'http://aiatl-v.vercel.app';
 
   try {
     // Step 1: Gather context

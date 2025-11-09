@@ -20,7 +20,7 @@ router.get('/oauth/url', async (req: AuthRequest, res) => {
       return res.status(500).json({ error: 'GitHub client ID not configured' });
     }
 
-    const redirectUri = process.env.GITHUB_REDIRECT_URI || 'http://localhost:5173/auth/callback';
+    const redirectUri = process.env.GITHUB_REDIRECT_URI || 'http://aiatl-v.vercel.app/auth/callback';
     const scopes = 'repo read:user user:email';
     const state = `${userId}-${Date.now()}`;
 
@@ -51,7 +51,7 @@ router.post('/oauth/callback', async (req: AuthRequest, res) => {
 
     const clientId = process.env.GITHUB_CLIENT_ID;
     const clientSecret = process.env.GITHUB_CLIENT_SECRET;
-    const redirectUri = process.env.GITHUB_REDIRECT_URI || 'http://localhost:5173/auth/callback';
+    const redirectUri = process.env.GITHUB_REDIRECT_URI || 'http://aiatl-v.vercel.app/auth/callback';
 
     if (!clientId || !clientSecret) {
       return res.status(500).json({ error: 'GitHub OAuth not configured' });

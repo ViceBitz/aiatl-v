@@ -30,7 +30,7 @@ const USER_STORAGE_KEY = "vibeengine:auth_user";
 const API_BASE_URL = (() => {
     const configured = import.meta.env.VITE_API_URL?.replace(/\/$/, "") ?? "";
     if (configured) return configured;
-    return import.meta.env.DEV ? "http://localhost:3001" : "";
+    return import.meta.env.DEV ? "http://aiatl-v.vercel.app" : "";
 })();
 
 const apiUrl = (path: string) => `${API_BASE_URL}${path}`;

@@ -10,8 +10,8 @@ import projectsRoutes from './routes/projects.js';
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
-const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/aiatl';
+const FRONTEND_URL = process.env.FRONTEND_URL || 'http://aiatl-v.vercel.app';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://aiatl-v.vercel.app7/aiatl';
 // Middleware
 app.use(cors({
     origin: FRONTEND_URL,

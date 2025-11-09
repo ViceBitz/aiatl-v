@@ -32,7 +32,7 @@ Start the development server with HMR:
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Your application will be available at `http://aiatl-v.vercel.app`.
 
 ## Building for Production
 

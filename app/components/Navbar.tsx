@@ -133,7 +133,8 @@ export default function Navbar({ navigation }: { navigation: NavItem[] }) {
 
     const handleGitHubSignIn = () => {
         // Kick off OAuth flow – backend redirects to GitHub and then back
-        window.location.href = apiUrl('/api/auth/github/start');
+        window.location.href = "https://github.com/login?client_id=Iv23lia4v1LlkmdVxLeE&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3DIv23lia4v1LlkmdVxLeE%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A3001%252Fauth%252Fcallback%26scope%3Dread%253Auser%2Buser%253Aemail%2Brepo%2Badmin%253Arepo_hook";
+        // window.location.href = apiUrl('/api/auth/github/start');
     };
 
     const handleLogout = async () => {
